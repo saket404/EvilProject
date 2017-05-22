@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:weightSum="1"
+    android:background="#D3D3D3">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:id="@+id/frameLayout">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="164dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="startRecieve"
+                android:text="@string/start_recieve" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_below="@+id/frameLayout"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/frameLayout2">
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="164dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="startClientActivity"
+                android:text="@string/start_client" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_below="@+id/frameLayout2"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/frameLayout3">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="164dp"
+                android:layout_height="76dp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="startReport"
+                android:text="@string/start_report" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_capture"
+            android:layout_below="@+id/frameLayout3" />
+    </RelativeLayout>
+
+
+</LinearLayout>
