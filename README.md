@@ -35,12 +35,5 @@ Files Distribution
   3.1 MainActivity.java: Intro to App
   3.2 MainActivity2.java: Main menu App
   
-4. Transfer Files Implementeation Files
-  4.1 ClientActivity.java: Sender Side implementation
-  4.2 ClientService.java: Sender transfer functions handler
-  4.3 FileBrowser.java: Choose file implementation
-  4.4 Recieve.java: Reciever side implementation 
-  4.5 ServerService.java: Reciever side handler
-  4.6 WiFiClientBroadcastReceiver.java: Sender side channel 
-  4.7 WiFiServerBroadcastReceiver.java: Reciever side channel
+4. Transfer Files Implementeation Files: (ClientActivity.java, ClientService.java, FileBrowser.java, Recieve.java, ServerService.java, WiFiClientBroadcastReceiver.java, WiFiServerBroadcastReceiver.java)
   
