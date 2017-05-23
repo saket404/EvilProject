@@ -15,6 +15,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class MessageActivity extends Activity {
 
@@ -42,7 +44,6 @@ public class MessageActivity extends Activity {
             }
         });
         connectPhones = (Button) findViewById(R.id.connect_phones);
-
         connectPhones.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View v)
@@ -59,7 +60,7 @@ public class MessageActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_client, menu);
+        getMenuInflater().inflate(R.menu.activity_message   , menu);
 
         return true;
     }
@@ -123,8 +124,7 @@ public class MessageActivity extends Activity {
                     /*******************************************
                      setup i/p streams
                      ******************************************/
-                    DataInputStream in = new
-                            DataInputStream(socket.getInputStream());
+                    BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
                     String line = null;
                     while ((line = in.readLine()) != null)
                     {

@@ -17,6 +17,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 
 
@@ -100,7 +102,6 @@ public class ServerActivity extends Activity {
         }
     }
 
-    @SuppressWarnings("deprecation")
     public class serverThread implements Runnable {
         public void run() {
             try{
@@ -114,7 +115,7 @@ public class ServerActivity extends Activity {
                         }
                     });
 
-                    DataInputStream in = new DataInputStream(client.getInputStream());
+                    BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
                     String line = null;
                     while((line = in.readLine()) != null) {
                         msg = msg + "\n Saket : " + line;
